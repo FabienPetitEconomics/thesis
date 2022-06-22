@@ -1,0 +1,54 @@
+\documentclass{amse_these}
+
+\begin{document}
+										%% page de titre
+	\chead{}
+	\pdfbookmark[0]{Thesis}{titre}
+	\thispagestyle{empty}
+	\input{tex/titre.tex}
+										%% licence
+	\newpage
+	\pdfbookmark[0]{Affidavit}{affidavit}
+	\thispagestyle{empty}
+	\input{tex/licence}
+
+	\chapter*{Résumé}					%% résumé
+    \addcontentsline{toc}{chapter}{Résumé}
+	\input{tex/resume}
+
+	\chapter*{Abstract}					%% abstract
+    \addcontentsline{toc}{chapter}{Abstract}
+	\input{tex/abstract}
+
+	\chapter*{Acknowledgements}			%% remerciements
+    \addcontentsline{toc}{chapter}{Acknowledgements}
+	\input{tex/remercie}
+	
+    \microtypesetup{protrusion=false}	%% désactive la protrusion (TOC LOFT GLS)
+    	\tableofcontents				%% TOC
+    	\listoffigures					%% LOF
+    	\listoftables					%% LOT
+    \microtypesetup{protrusion=true}	%% rétabli la protrusion
+
+	\chapter*{General Introduction}
+	\addcontentsline{toc}{chapter}{General Introduction}
+    \markboth{General Introduction}{General Introduction}
+	\input{tex/intro}
+    \clearpage
+	\ohead{\leftmark\ifstr{\rightmark}{\leftmark}{}{ -- \rightmark}} %% place le chapître et la partie en en-tête
+
+	\chapter{Inter-generational conflict and the declining labor share}\label{chap1}
+	\input{tex/chap1}
+
+	\chapter{Spreading the polarization disease: from the labor market to social mobility}\label{chap2}
+	\input{tex/chap2}
+
+	\chapter{Spillover effects across values}\label{chap3}
+	\input{tex/chap3}
+
+	\chapter*{General Conclusion}
+	\addcontentsline{toc}{chapter}{General Conclusion}
+    \markboth{General Conclusion}{General Conclusion}
+	\input{tex/conc}
+
+\end{document}

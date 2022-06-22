@@ -1,0 +1,208 @@
+This appendix presents additional regression tables of the paper. 
+% RAW ESTIMATE
+Table \ref{chap3-tab:reg-v5-raw-all-long} presents the long-version table of the regression table \ref{chap3-tab:reg-v5-raw-all-short} in the paper.
+% INSTRUMENTAL VARIABLE
+Table \ref{chap3-tab:reg-v5-IV-GFGC-long} presents the IV estimate of the spillover effects. Tables \ref{chap3-tab:reg-v5-IV-GFvote} and \ref{chap3-tab:reg-v5-IV-GCvote} correspond to the IV estimate of the group membership.
+% SEM
+Table \ref{chap3-tab:reg-v5-sem-GF-stage12}, \ref{chap3-tab:reg-v5-sem-GC-stage12}, and \ref{chap3-tab:reg-v5-sem-BU-stage12} present the details of the 2SLS estimates of the SEM for, respectively, the girl-first, got-cancer, and been-unemployed life event.
+% DECOMPOSITION
+Tables \ref{chap3-tab:decomp-GF}, \ref{chap3-tab:decomp-GC}, and \ref{chap3-tab:decomp-BU} summarize the decomposition of the total effect from the SEM for, respectively, the girl-first, got-cancer, and been-unemployed life event.
+% ROBUSTNESS
+Figure \ref{chap3-fig:sem-decomp-v5-GFGender} summarizes the decomposition of the total
+effect of girl-first life event by parent. 
+Figure \ref{chap3-fig:sem-decomp-v5-GFEduc} summarizes the decomposition of the total
+effect of girl-first life event by education level.
+Figure \ref{chap3-fig:sem-decomp-v5-BUActivity} summarizes the decomposition of the total
+effect of been-unemployed life event according to the current activity status.
+
+%%%%% APPLIED %%%%%
+
+\begin{table}[!htb]
+    \centering
+    \caption{Effect of life events on values}
+    \label{chap3-tab:reg-v5-raw-all-long}
+    % \resizebox*{\textwidth}{!}{
+    \begin{threeparttable}
+        \setlength{\tabcolsep}{0pt}
+        \input{chap3/tabular/reg-v5-raw-all}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. Male in the NCDS cohort in his forties with primary education as the reference group. GirlFirst and GotCancer are the life events. In GirlFirst regressions, parents who have had a boy as a first child are the reference group. In GotCancer regressions, individuals who never had a cancer are the reference group. In BeenUnemp, individuals who have never been unemployed are the reference group. Table \ref{chap3-tab:reg-v5-raw-all-short} in the paper summarizes the coefficients.}
+        \end{tablenotes}
+    \end{threeparttable}
+    % }
+\end{table}
+
+\begin{table}[!htb]
+    \centering
+    \caption{IV Estimate of the spillover effect}
+    \label{chap3-tab:reg-v5-IV-GFGC-long}
+    \begin{threeparttable}
+        \input{chap3/tabular/reg-v5-IV-GFGC.tex}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. Control variables include gender, education (primary, secondary, tertiary), cohort fixed effects and period fixed effects. Male in the NCDS cohort in his forties with primary education as the reference group. GirlFirst and GotCancer are the life events. In GirlFirst regressions, parents who have had a boy as a first child are the reference group. In GotCancer regressions, individuals who never had a cancer are the reference group. Table \ref{chap3-tab:reg-v5-IV-GFGC-short} in the paper summarizes the coefficients.}
+        \end{tablenotes}
+    \end{threeparttable}
+    % }
+\end{table}
+
+\begin{table}[!htb]
+    \centering
+    \caption{IV Estimate of the group membership (GirlFirst)}
+    \label{chap3-tab:reg-v5-IV-GFvote}
+    \begin{threeparttable}
+        \setlength{\tabcolsep}{3pt}
+        \input{chap3/tabular/reg-v5-IV-GFvote}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. Control variables include gender, education (primary, secondary, tertiary), cohort fixed effects and period fixed effects. Male in the NCDS cohort in his forties with primary education as the reference group. GirlFirst and GotCancer are the life events. Parents who have had a boy as a first child are the reference group.
+            % Multinomial
+            The baseline outcome of the multinomial logistic regression is the vote for Other (encompassing all other parties, blank votes and abstention). $\text{Vote}_{t-1}$ corresponds to the effect of having voted for the corresponding party in the previous period.
+            Table \ref{chap3-tab:reg-v5-IV-GFGCvote-short} in the paper summarizes the coefficients.}
+        \end{tablenotes}
+    \end{threeparttable}
+    % }
+\end{table}
+
+\begin{table}[!htb]
+    \centering
+    \caption{IV Estimate of the group membership (GotCancer)}
+    \label{chap3-tab:reg-v5-IV-GCvote}
+    \begin{threeparttable}
+        \setlength{\tabcolsep}{3pt}
+        \input{chap3/tabular/reg-v5-IV-GCvote}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. Control variables include gender, education (primary, secondary, tertiary), cohort fixed effects and period fixed effects. Male in the NCDS cohort in his forties with primary education as the reference group. GirlFirst and GotCancer are the life events. Individuals who never had a cancer are the reference group.
+            % Multinomial
+            The baseline outcome of the multinomial logistic regression is the vote for Other (encompassing all other parties, blank votes and abstention). $\text{Vote}_{t-1}$ corresponds to the effect of having voted for the corresponding party in the previous period.
+            Table \ref{chap3-tab:reg-v5-IV-GFGCvote-short} in the paper summarizes the coefficients.}
+        \end{tablenotes}
+    \end{threeparttable}
+    % }
+\end{table}
+
+\begin{table}[!htb]
+    \centering
+    \caption{SEM Estimate of the spillover effects (GirlFirst)}
+    \label{chap3-tab:reg-v5-sem-GF-stage12}
+    % \resizebox*{\textwidth}{!}{
+    \begin{threeparttable}
+        \input{chap3/tabular/reg-v5-sem-GF0-stage12}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. Control variables in all regressions include cohort, period, gender and education.}
+        \end{tablenotes}
+    \end{threeparttable}%}
+\end{table}
+
+\begin{table}[!htb]
+    \centering
+    \caption{SEM Estimate of the spillover effects (GotCancer)}
+    \label{chap3-tab:reg-v5-sem-GC-stage12}
+    % \resizebox*{\textwidth}{!}{
+    \begin{threeparttable}
+        \input{chap3/tabular/reg-v5-sem-GC0-stage12}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. Control variables in all regressions include cohort, period, gender and education.}
+        \end{tablenotes}
+    \end{threeparttable}%}
+\end{table}
+
+\begin{table}[!htb]
+    \centering
+    \caption{SEM Estimate of the spillover effects (BeenUnemp)}
+    \label{chap3-tab:reg-v5-sem-BU-stage12}
+    % \resizebox*{\textwidth}{!}{
+    \begin{threeparttable}
+        \input{chap3/tabular/reg-v5-sem-BU0-stage12}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. Control variables in all regressions include cohort, period, gender and education.}
+        \end{tablenotes}
+    \end{threeparttable}%}
+\end{table}
+
+\begin{table}[!htb]
+    \centering
+    \caption{Decomposition of the effect of GirlFirst on values}
+    \label{chap3-tab:decomp-GF}
+    \begin{threeparttable}
+        \setlength{\tabcolsep}{12pt}
+        \input{chap3/tabular/decomp-v5-GF0}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: Magnitudes in standard deviations. Direct effects in bold. Relative share with respect to the direct effect in percent between parentheses.}
+        \end{tablenotes}
+    \end{threeparttable}
+\end{table}
+
+\begin{table}[!htb]
+    \centering
+    \caption{Decomposition of the effect of GotCancer on values}
+    \label{chap3-tab:decomp-GC}
+    \begin{threeparttable}
+        \setlength{\tabcolsep}{12pt}
+        \input{chap3/tabular/decomp-v5-GC0}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: Magnitudes in standard deviations. Direct effects in bold. Relative share with respect to the direct effect in percent between parentheses.}
+        \end{tablenotes}
+    \end{threeparttable}
+\end{table}
+
+\begin{table}[!htb]
+    \centering
+    \caption{Decomposition of the effect of BeenUnemp on values}
+    \label{chap3-tab:decomp-BU}
+    \begin{threeparttable}
+        \setlength{\tabcolsep}{12pt}
+        \input{chap3/tabular/decomp-v5-BU0}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: Magnitudes in standard deviations. Direct effects in bold. Relative share with respect to the direct effect in percent between parentheses.}
+        \end{tablenotes}
+    \end{threeparttable}
+\end{table}
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Decomposition of the effect of GirlFirst by parent}
+    \label{chap3-fig:sem-decomp-v5-GFGender}
+    \includegraphics[width=\linewidth]{chap3/graphic/decomp-v5-GFGender.png}
+    \hrulefill
+	\vspace{-3em}
+	\justify\singlespacing\footnotesize{\textit{Notes:} This figure presents the decomposition of the total effect of the girl-first life event on both values, Conservation and Collectivism, according to the parent. The magnitude of each effect is expressed in standard deviation.}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Decomposition of the effect of GirlFirst by education}
+    \label{chap3-fig:sem-decomp-v5-GFEduc}
+    \includegraphics[width=\linewidth]{chap3/graphic/decomp-v5-GFEduc.png}
+    \hrulefill
+	\vspace{-3em}
+	\justify\singlespacing\footnotesize{\textit{Notes:} This figure presents the decomposition of the total effect of the girl-first life event on both values, Conservation and Collectivism, according to education. The magnitude of each effect is expressed in standard deviation.}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Decomposition of the effect of GotCancer with and without the NCDS58 Age 50}
+    \label{chap3-fig:sem-decomp-v5-GCNCDS58}
+    \includegraphics[width=\linewidth]{chap3/graphic/decomp-v5-GCNCDS58.png}
+    \hrulefill
+	\vspace{-3em}
+	\justify\singlespacing\footnotesize{\textit{Notes:} This figure presents the decomposition of the total effect of the got-cancer life event on both values, Conservation and Collectivism, for the NCDS58 cohort at age 50 only and without them. The magnitude of each effect is expressed in standard deviation.}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Decomposition of the effect of GotCancer for those who never have had cancer before}
+    \label{chap3-fig:sem-decomp-v5-GCNever}
+    \includegraphics[width=\linewidth]{chap3/graphic/decomp-v5-GCNever.png}
+    \hrulefill
+	\vspace{-3em}
+	\justify\singlespacing\footnotesize{\textit{Notes:} This figure presents the decomposition of the total effect of the got-cancer life event on both values, Conservation and Collectivism, for the NCDS58 cohort at age 50 only and without them. The magnitude of each effect is expressed in standard deviation.}
+\end{figure}
+
+\begin{figure}[!htb]
+    \centering
+    \caption{Decomposition of the effect of BeenUnemp by current activity status}
+    \label{chap3-fig:sem-decomp-v5-BUActivity}
+    \includegraphics[width=\linewidth]{chap3/graphic/decomp-v5-BUActivity.png}
+    \hrulefill
+	\vspace{-3em}
+	\justify\singlespacing\footnotesize{\textit{Notes:} This figure presents the decomposition of the total effect of the girl-first life event on both values, Conservation and Collectivism, according to the current activity status. The magnitude of each effect is expressed in standard deviation.}
+\end{figure}

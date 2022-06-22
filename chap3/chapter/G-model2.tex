@@ -1,0 +1,65 @@
+To quantify the effect of life events on values, we compare two individuals based on their life trajectories and values. Suppose there exist two individuals $i$ and $j$ that are identical except in their initial value $a_0$, with $a_0^j > a_0^i$. Both individuals belong to the group $\underline{s}$.
+Let $\pi_t = \pi(a_t)$ be the probability that a life event occurs which is endogenous to the value $a$.
+
+Suppose the information shock $\Delta a_0$---due to the life event---has the same magnitude for both individuals and would be sufficiently large such that both individuals would identify to the other group. The expected values $a_1$ and $b_1$ for the individual $j$ are
+\begin{align}
+    \mathbb{E}(a_1^j) &= \frac{\eta_a a^j_0 + \phi_a \underline{a}}{\eta_a+\phi_a} + \pi(a_0^j)\left[ \frac{\eta_a\Delta a_0 + \phi_a(\overline{a}-\underline{a})}{\eta_a+\phi_a} \right],\\
+    \mathbb{E}(b_1^j) &= \frac{\eta_b b^j_0 + \phi_b \underline{b}}{\eta_b+\phi_b} + \pi(a_0^j)\frac{\phi_b(\overline{b}-\underline{b})}{\eta_b+\phi_b},
+\end{align}
+where $\mathbb{E}$ is the expectation operator. It is straightforward to show that these values are symmetrical for the individual $i$. Hence, the biases due to the endogeneity of values can be written as 
+\begin{align}
+    \mathbb{E}(a_1^j) - a_1^j &= \pi(a_0^j)\times\Delta A,\\
+    \mathbb{E}(b_1^j) - b_1^j&= \pi(a_0^j)\times\Delta B,
+\end{align}
+where $\Delta A \equiv \frac{\eta_a\Delta a_0 + \phi_a(\overline{a}-\underline{a})}{\eta_a+\phi_a}$ is the direct effect of the life changing event on value $a$, and $\Delta B \equiv  \frac{\phi_b(\overline{b}-\underline{b})}{\eta_b+\phi_b}$ is the spillover effect of the life event on value $b$.
+
+
+Let $\Delta\mathbb{E}v_t$ be the difference in expected value $v_t$ with respect to the true difference between both individuals, namely,
+\begin{equation}
+    \Delta\mathbb{E}v_t \equiv \mathbb{E}(v_t^j) - \mathbb{E}(v_t^i) - (v_t^j - v_t^i)
+\end{equation}
+% Suppose both individuals have the same initial values $a_0$. Then, it is straightforward to show that $\Delta\mathbb{E}v_1 = 0$ which means they have the same expected value in period $1$. In our case,
+Thus,
+\begin{align}
+    \Delta\mathbb{E}a_1 &= \left[\pi(a_0^j) - \pi(a_0^i)\right]\times\Delta A,\label{chap3-eq:DeltaA}\\
+    \Delta\mathbb{E}b_1 &= \left[\pi(a_0^j) - \pi(a_0^i)\right]\times\Delta B,\label{chap3-eq:DeltaB}
+\end{align}
+When the probability that the life event occurs is exogenous to values, i.e. $\pi(a_0^j) = \pi(a_0^i)$, there is no bias when estimating the difference between both individuals. 
+However, in many cases such as unemployment, this probability is likely to be endogenous, i.e. $\pi(a_0^j) \neq \pi(a_0^i)$, which leads to a bias when gauging the effect of a life event on values.
+
+The magnitude of the bias depends on two components: the difference in terms of probabilities that captures the degree of endogeneity of the life event with respect to values; and the magnitude of either the direct effect or the spillover effect. 
+Although the endogeneity issue affects the magnitude of the total effect, it does not change the relative shares of the direct and spillover effects because it is a scale factor of the total effect.
+
+In order to evaluate the magnitude of the bias, I assume that the probability $\pi(a_t)$ is an increasing function of $a_t$. The individual $j$ is more likely to face the life event since $a_0^j > a_0^i$. For simplicity, let assume a binomial logistic function such that
+\begin{equation}
+    \pi(a_0, \beta_a) = \frac{e^{\beta_a a_0}}{1 + e^{\beta_a a_0}}.
+\end{equation}
+Note that the intercept has been omitted. Suppose a large endogeneity, namely, that the advantage in terms of the probability that the life event occurs given by a higher value $a$ has an odd-ratio about $2$, which means that an individual with a one-standard-deviation increase in $a_0$ would be two times more likely that the life event occurs. As $\beta_a$ corresponds to the log-odd ratio, it implies that $\beta_a = \log(2)$. 
+
+Table \ref{chap3-tab:gap-a0} summarizes the size of the bias according to the gap in initial values between both individuals.
+\begin{table}[!tb]
+    \centering
+    \caption{Endogeneity bias}
+    \label{chap3-tab:gap-a0}
+    \begin{threeparttable}
+        \setlength{\tabcolsep}{9pt}{}
+        \begin{tabular}{lrrrrrrr}
+            \toprule 
+            & \multicolumn{7}{c}{$\beta_a = \log(2)$} \\
+            \cmidrule(lr){2-8}
+            $a_0^j$ & -2 & -1 & -0.5 & 0 & 0.5 & 1 & 2\\
+            $a_0^i$ & 2 & 1 & 0.5 & 0 & -0.5 & -1 & -2\\
+            \midrule
+            $\pi(a_0^j)$ & 0.2 & 0.33 & 0.41 & 0.5 & 0.59 & 0.66 & 0.8\\
+            $\pi(a_0^i)$ & 0.8 & 0.66 & 0.59 & 0.5 & 0.41 & 0.33 & 0.2\\
+            \midrule
+            $\Delta\pi$ & -0.6 & -0.33 & -0.17 & 0 & 0.17 & 0.33 & 0.6\\
+            \bottomrule
+        \end{tabular}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: This table presents the magnitude of the endogeneity bias due to the difference in initial value $a$ between two individuals. $\pi(a_0, \beta_a)$ corresponds to the probability derived from the binomial logistic function and $\Delta\pi$ to the difference in probabilities between both individuals.}
+        \end{tablenotes}
+    \end{threeparttable}
+\end{table}
+Since $\lvert \Delta\pi \rvert < 1$, it implies that the endogeneity bias does not change the sign of the direct and indirect effects. 
+The (2, -2) and (-2, 2) scenarii are extreme cases in which there is a high degree of polarization in terms of values such that both groups have respectively 2 and -2 standard deviations on average while the average value in the population remains 0. Even in those extreme cases, both the direct and spillover effects can be biased by at the most a scale factor of plus or minus $0.6$.

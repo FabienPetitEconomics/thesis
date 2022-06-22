@@ -1,0 +1,55 @@
+\begin{tabular}{l D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5}}
+\toprule
+ & \multicolumn{5}{c}{Linear regression - Dep. var.: Education (in PIR-STD)} \\
+\cmidrule(lr){2-6}
+ & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)} \\
+\midrule
+Intercept                        & -0.17^{***} & -0.09^{***} & -0.03       & -0.22^{***} & -0.16^{***} \\
+                                 & (0.02)      & (0.03)      & (0.03)      & (0.05)      & (0.06)      \\
+Female                           & 0.09^{***}  & 0.07^{***}  & 0.07^{***}  & 0.06^{***}  & 0.06^{**}   \\
+                                 & (0.02)      & (0.02)      & (0.02)      & (0.02)      & (0.02)      \\
+Father in Out-of-work            & -0.21^{***} & -0.20^{***} & -0.06       & -0.09       & -0.16       \\
+                                 & (0.04)      & (0.05)      & (0.67)      & (0.65)      & (0.65)      \\
+Father in Middling               & 0.09^{***}  & 0.07^{**}   & 0.01        & 0.02        & 0.02        \\
+                                 & (0.02)      & (0.03)      & (0.03)      & (0.03)      & (0.03)      \\
+Father in High-paying            & 0.71^{***}  & 0.50^{***}  & 0.31^{***}  & 0.21^{***}  & 0.20^{***}  \\
+                                 & (0.03)      & (0.04)      & (0.04)      & (0.04)      & (0.04)      \\
+Father's education               &             & 0.14^{***}  & 0.13^{***}  & 0.09^{***}  & 0.09^{***}  \\
+                                 &             & (0.01)      & (0.01)      & (0.01)      & (0.01)      \\
+Mother's education               &             & 0.13^{***}  & 0.13^{***}  & 0.10^{***}  & 0.11^{***}  \\
+                                 &             & (0.01)      & (0.01)      & (0.01)      & (0.01)      \\
+Father's soc. class              &             &             & 0.13^{***}  & 0.10^{***}  & 0.09^{***}  \\
+                                 &             &             & (0.01)      & (0.02)      & (0.02)      \\
+Number of siblings               &             &             &             &             & -0.04^{***} \\
+                                 &             &             &             &             & (0.01)      \\
+Eldest child                     &             &             &             &             & 0.08^{***}  \\
+                                 &             &             &             &             & (0.03)      \\
+BCS cohort                       & -0.09^{**}  & -0.11^{***} & -0.06       & -0.16^{***} & -0.20^{***} \\
+                                 & (0.04)      & (0.04)      & (0.05)      & (0.05)      & (0.08)      \\
+Female $\times$ BCS              & -0.01       & 0.01        & -0.00       & -0.02       & -0.03       \\
+                                 & (0.03)      & (0.03)      & (0.03)      & (0.03)      & (0.04)      \\
+Father in Out. $\times$ BCS      & -0.04       & -0.11       & -0.26       & -0.23       & -0.52       \\
+                                 & (0.10)      & (0.12)      & (0.86)      & (0.91)      & (1.12)      \\
+Father in Mid. $\times$ BCS      & 0.02        & 0.01        & -0.00       & 0.04        & 0.05        \\
+                                 & (0.04)      & (0.04)      & (0.05)      & (0.05)      & (0.05)      \\
+Father in High $\times$ BCS      & -0.13^{***} & -0.05       & -0.05       & 0.05        & 0.04        \\
+                                 & (0.04)      & (0.05)      & (0.07)      & (0.07)      & (0.08)      \\
+Father's educ. $\times$ BCS      &             & -0.06^{***} & -0.06^{***} & -0.03^{*}   & -0.02       \\
+                                 &             & (0.02)      & (0.02)      & (0.02)      & (0.02)      \\
+Mother's educ. $\times$ BCS      &             & -0.01       & -0.00       & -0.02       & -0.03       \\
+                                 &             & (0.02)      & (0.02)      & (0.02)      & (0.02)      \\
+Father's soc. class $\times$ BCS &             &             & -0.05^{**}  & -0.04^{*}   & -0.04^{*}   \\
+                                 &             &             & (0.02)      & (0.02)      & (0.03)      \\
+Number of siblings $\times$ BCS  &             &             &             &             & 0.04^{***}  \\
+                                 &             &             &             &             & (0.02)      \\
+Eldest child $\times$ BCS        &             &             &             &             & -0.03       \\
+                                 &             &             &             &             & (0.04)      \\
+\midrule
+Parents' interest in education & \multicolumn{1}{c}{ } & \multicolumn{1}{c}{ } & \multicolumn{1}{c}{ } & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+Region FE & \multicolumn{1}{c}{ } & \multicolumn{1}{c}{ } & \multicolumn{1}{c}{ } & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+\midrule
+R$^2$ & \multicolumn{1}{c}{0.07} & \multicolumn{1}{c}{0.11} & \multicolumn{1}{c}{0.11} & \multicolumn{1}{c}{0.17} & \multicolumn{1}{c}{0.17}\\
+Adj. R$^2$ & \multicolumn{1}{c}{0.07} & \multicolumn{1}{c}{0.11} & \multicolumn{1}{c}{0.11} & \multicolumn{1}{c}{0.17} & \multicolumn{1}{c}{0.17}\\
+Num. obs. & \multicolumn{1}{c}{20534} & \multicolumn{1}{c}{15342} & \multicolumn{1}{c}{14532} & \multicolumn{1}{c}{12329} & \multicolumn{1}{c}{10901}\\
+\bottomrule
+\end{tabular}

@@ -1,0 +1,24 @@
+\begin{tabular}{l D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{4.5} D{.}{.}{4.5} D{.}{.}{4.5} D{.}{.}{4.5} D{.}{.}{4.5} D{.}{.}{4.5} D{.}{.}{4.5} D{.}{.}{4.5}}
+\toprule
+ & \multicolumn{12}{c}{2SLS regression - by education level} \\
+\cmidrule(lr){2-13}
+ & \multicolumn{4}{c}{Primary} & \multicolumn{4}{c}{Secondary} & \multicolumn{4}{c}{Tertiary} \\
+\cmidrule(lr){2-5}\cmidrule(lr){6-9}\cmidrule(lr){10-13}
+ & \multicolumn{1}{c}{(Cons1)} & \multicolumn{1}{c}{(Coll1)} & \multicolumn{1}{c}{(Cons2)} & \multicolumn{1}{c}{(Coll2)} & \multicolumn{1}{c}{(Cons1)} & \multicolumn{1}{c}{(Coll1)} & \multicolumn{1}{c}{(Cons2)} & \multicolumn{1}{c}{(Coll2)} & \multicolumn{1}{c}{(Cons1)} & \multicolumn{1}{c}{(Coll1)} & \multicolumn{1}{c}{(Cons2)} & \multicolumn{1}{c}{(Coll2)} \\
+\midrule
+GirlFirst                 & 0.04^{**}  & -0.00       & 0.04^{**}  & 0.01        & 0.08^{***} & -0.00       & 0.08^{***} & 0.02        & -0.01      & 0.02        & -0.01      & 0.02        \\
+                          & (0.02)     & (0.02)      & (0.02)     & (0.02)      & (0.03)     & (0.03)      & (0.03)     & (0.03)      & (0.03)     & (0.03)      & (0.03)     & (0.03)      \\
+Cons$_{t-1}$              & 0.50^{***} & -0.16^{***} & 0.57^{***} &             & 0.58^{***} & -0.19^{***} & 0.65^{***} &             & 0.61^{***} & -0.18^{***} & 0.66^{***} &             \\
+                          & (0.01)     & (0.01)      & (0.01)     &             & (0.01)     & (0.01)      & (0.01)     &             & (0.01)     & (0.01)      & (0.01)     &             \\
+Coll$_{t-1}$              & 0.21^{***} & 0.46^{***}  &            & 0.53^{***}  & 0.20^{***} & 0.49^{***}  &            & 0.56^{***}  & 0.16^{***} & 0.50^{***}  &            & 0.55^{***}  \\
+                          & (0.01)     & (0.01)      &            & (0.01)      & (0.01)     & (0.01)      &            & (0.01)      & (0.01)     & (0.01)      &            & (0.01)      \\
+$\widehat{\text{Cons}}_t$ &            &             &            & -0.32^{***} &            &             &            & -0.32^{***} &            &             &            & -0.30^{***} \\
+                          &            &             &            & (0.01)      &            &             &            & (0.02)      &            &             &            & (0.02)      \\
+$\widehat{\text{Coll}}_t$ &            &             & 0.46^{***} &             &            &             & 0.40^{***} &             &            &             & 0.31^{***} &             \\
+                          &            &             & (0.02)     &             &            &             & (0.03)     &             &            &             & (0.02)     &             \\
+\midrule
+R$^2$ & \multicolumn{1}{c}{0.31} & \multicolumn{1}{c}{0.25} & \multicolumn{1}{c}{0.31} & \multicolumn{1}{c}{0.25} & \multicolumn{1}{c}{0.37} & \multicolumn{1}{c}{0.31} & \multicolumn{1}{c}{0.37} & \multicolumn{1}{c}{0.31} & \multicolumn{1}{c}{0.42} & \multicolumn{1}{c}{0.36} & \multicolumn{1}{c}{0.42} & \multicolumn{1}{c}{0.36}\\
+Adj. R$^2$ & \multicolumn{1}{c}{0.31} & \multicolumn{1}{c}{0.25} & \multicolumn{1}{c}{0.31} & \multicolumn{1}{c}{0.25} & \multicolumn{1}{c}{0.37} & \multicolumn{1}{c}{0.31} & \multicolumn{1}{c}{0.37} & \multicolumn{1}{c}{0.31} & \multicolumn{1}{c}{0.42} & \multicolumn{1}{c}{0.35} & \multicolumn{1}{c}{0.42} & \multicolumn{1}{c}{0.35}\\
+Num. obs. & \multicolumn{1}{c}{13626} & \multicolumn{1}{c}{13626} & \multicolumn{1}{c}{13626} & \multicolumn{1}{c}{13626} & \multicolumn{1}{c}{4525} & \multicolumn{1}{c}{4525} & \multicolumn{1}{c}{4525} & \multicolumn{1}{c}{4525} & \multicolumn{1}{c}{5203} & \multicolumn{1}{c}{5203} & \multicolumn{1}{c}{5203} & \multicolumn{1}{c}{5203}\\
+\bottomrule
+\end{tabular}

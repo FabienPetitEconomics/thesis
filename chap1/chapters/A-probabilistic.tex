@@ -1,0 +1,64 @@
+In order to determine their preferred public policy, households maximize their indirect utility function. Using the first order conditions from the household maximization problem in equations \eqref{chap1-eq:hhmaxc1}, \eqref{chap1-eq:hhmaxc2} and \eqref{chap1-eq:hhmaxs}, I obtain:
+\begin{align}
+	U_t^{y,i} &= \ln\left[\frac{1}{1+\alpha p_{t+1}}y_t^i\right]+ \alpha p_{t+1} U_{t+1}^{o,i}, \label{chap1-eq:utility_young} \\ 
+	U_t^{o,i} &= \ln\left[\frac{\alpha p_t}{1+\alpha p_t}(1-\tau_t)y_{t-1}^i\hat{R}_t\right] + \beta \ln g_t, \label{chap1-eq:utility_old}
+\end{align}
+% Define indirect utilities
+where $U_t^{y,i}$ is the indirect utility of a young household at time $t$ in employment status $i\in\{e, u\}$ and $U_t^{o,i}$ is the indirect utility of an old household at time $t$ who was in employment status $i$ in the previous period. 
+% Depend on the first period income
+Thus, indirect utilities depend on the first-period disposable income, $y^i_t$, and therefore the employment status.%
+% PP prefs are functions of 1st period income
+\footnote{Implicitly, public policy preferences are functions of the economic environment when the individuals are young. In line with the literature on preferences for redistribution, \citet{Giuliano2013Growing} show that individuals growing in recession tend to have greater preferences for redistribution; see also \citet{Alesina2011Preferences} for a general review of this literature. However, in this model, such a link is canceled by the logarithmic form of the utility function. For instance, the partial derivative of the indirect utility of the old with respect to either $\tau_t$ or $g_t$ does not contain the disposable income of the previous period $y_{t-1}^i$.}
+
+% Timing => Young don't know their emp situation
+The youth vote before their employment status is revealed.
+% Vote based on expectation
+They hence vote on the basis of their expected utility, corresponding to the weighted average of both indirect utilities, i.e. $\mathbb{E}({U}_t^y) = (1-u_t)U_t^{y,e} + u_t U_t^{y,u}$.
+% Expected indirect utility
+Therefore, the expected indirect utility of a young individual at time $t$ is
+\begin{equation}
+\begin{aligned}\label{chap1-eq:expected_utility_young}
+	\mathbb{E}({U}_t^y) &= (1+\alpha p_{t+1})\left\{(1-u_t)\ln\left[\frac{(1-\tau_t) w_t}{1+\alpha p_{t+1}}\right] + u_t \ln\left[\frac{b_t}{1+\alpha p_{t+1}}\right]\right\} \\
+	&+ \alpha p_{t+1} \bigg\{ \ln\left[\alpha p_{t+1} (1-\tau_{t+1}) \hat{R}_{t+1}\right] + \beta \ln g_{t+1} \bigg\},
+\end{aligned}
+\end{equation}
+where $\mathbb{E}$ is the expectation operator. In contrast, the old have no uncertainty about the returns of their savings, thus, they vote on the basis of their indirect utility.
+
+% Explain the proba voting setup
+I consider a probabilistic voting setup.\footnote{The alternative would be a median voter setup. However, the median voter setup would create two extreme regimes with one of them being a gerontocracy. It would also generate large swings in public policy if the median-voter switches from young to old or vice versa. Under probabilistic voting, the equilibrium policy platform is a continuous function of the old-age dependency ratio.} With probabilistic voting, all agents vote for a policy platform $\psi_t = (\tau_t, b_t, g_t)$ represented by opportunistic candidates (or parties). Candidates try to maximize their probability of winning the election. They differ in their popularity and there is an idiosyncratic bias among voters for one candidate or the other. Candidates know about these biases. In equilibrium, all candidates choose the same policy platform $\psi_t^\star$ that maximizes the political objective function $W_t(\psi_t)$ defined below. See \citet{Lindbeck1987Balanced} for more details on the probabilistic-voting setup.
+
+% Political objective function depends on pop share and omega
+The political objective function depends on the share of each group of voters in the population and their respective sensitivity to policy changes $\omega^j$ with $j\in \{y,o\}$, where $\omega^j$ denotes the density parameter of the uniform distribution function that characterizes the ideology of the $j$ group. 
+% Three groups of voters: YOUNG and OLD (emp and unemp 1st period)
+There are two groups of voters: young and old households. Thus, I assume all elderly have the same sensitivity regardless of their employment situation when they were young.
+% High omega => Spread ideology
+The greater $\omega^j$, the more spread are the ideologies within the $j$ group. 
+% Spread ideology => Easier for candidates to target
+Hence, opportunistic candidates prefer targeting less ideological groups, i.e. large $\omega^j$, because they are easier to convince.
+% EQ public policy
+The equilibrium public policy $\psi_t^\star$ maximizes the following political objective function:
+\begin{equation*}
+	W_t(\psi_t) = \frac{N_t^y}{N_t} \omega^y \mathbb{E}\left[U_t^y(\psi_t)\right] + \frac{N_t^o}{N_t} \omega^o \Big\{ u_{t-1} U_t^{o,u}(\psi_t) + (1-u_{t-1}) U_t^{o,e}(\psi_t) \Big\},
+\end{equation*}
+subject to the government budget constraint from equation \eqref{chap1-eq:gov-budget}, where $\mathbb{E}\left[U_t^y(\psi_t)\right]$ and $U_t^{o,i}(\psi_t)$ are respectively defined by equations \eqref{chap1-eq:expected_utility_young} and \eqref{chap1-eq:utility_old}.
+
+% Recall the no-coordination assumption
+There is no coordination between voting and wage bargaining. Therefore, households only care about the direct effects of public policy on their utility. They do not consider the indirect effects operating through unemployment, wages, and the accumulation of capital. Let $\tilde{U}^i_t$ be the part of the utility which is directly affected by the public policy platform. From equation \eqref{chap1-eq:utility_old}, we have that $\tilde{U}_t^o = \tilde{U}_t^{o,u} = \tilde{U}_t^{o,e}$. 
+% New political objective function
+Hence, I rewrite the political objective function as
+\begin{equation*}
+	W_t(\psi_t) = \frac{N_t^y}{N_t} \omega^y \mathbb{E}\left[\tilde{U}_t^y(\psi_t)\right] + \frac{N_t^o}{N_t} \omega^o \tilde{U}_t^o(\psi_t) + \text{\textit{other~terms}}
+\end{equation*}
+where $\text{\textit{other~terms}}$ encompasses all the terms that are not directly affected by public policy.
+
+% Define omega
+Let $\omega$ be the \textit{relative ideological spread-out} of the youth with respect to the elderly. The relative ideological spread-out is characterized by the ratio of the sensitivities of voting behavior to policy changes for each group, i.e. $\omega \equiv \omega^y/\omega^o$. I assume this spread-out is constant over time.\footnote{This assumption can be interpreted in two ways: either both relative ideological spread-outs are time invariant or they vary in same proportions. It would be interesting to consider these spread-outs as endogenous or to make them cohort-specific. This goes beyond the scope of this paper.} Using equations \eqref{chap1-eq:utility_old} and \eqref{chap1-eq:expected_utility_young}, I rewrite the maximization program that characterizes the public policy equilibrium as 
+\begin{align*}
+	\max_{\tau_t, b_t, g_t} W_t(\tau_t, b_t, g_t) &= \eta_t \bigg[ (1-u_t)\ln(1-\tau_t) + u_t \ln b_t\bigg] + \ln(1-\tau_t) + \beta \ln(g_t) \\
+	&+ \text{\textit{other~terms}}
+\end{align*}
+subject to the government budget constraint from equation \eqref{chap1-eq:gov-budget}, where 
+\begin{equation*}
+	\eta_t = \frac{n_t}{p_t}\omega(1+\alpha p_{t+1})
+\end{equation*}
+is the \textit{political weight of the young}.

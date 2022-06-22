@@ -1,0 +1,47 @@
+\begin{tabular}{l D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5}}
+\toprule
+ & \multicolumn{5}{c}{Linear regression - Dep. var.: Education (in PIR)} \\
+\cmidrule(lr){2-6}
+ & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(3)} & \multicolumn{1}{c}{(4)} & \multicolumn{1}{c}{(5)} \\
+\midrule
+Intercept                        & 0.50^{***}  & 0.31^{***}  & 0.29^{***}  & 0.34^{***}  & 0.35^{***}  \\
+                                 & (0.01)      & (0.01)      & (0.01)      & (0.02)      & (0.02)      \\
+Female                           & 0.01^{***}  & 0.01^{***}  & 0.01^{***}  & 0.01^{**}   & 0.01^{**}   \\
+                                 & (0.00)      & (0.00)      & (0.00)      & (0.00)      & (0.00)      \\
+Parental income                  & 0.04^{***}  & 0.02^{***}  & 0.02^{***}  & 0.02^{***}  & 0.02^{***}  \\
+                                 & (0.00)      & (0.00)      & (0.00)      & (0.00)      & (0.00)      \\
+Father's education               &             & 0.22^{***}  & 0.16^{***}  & 0.10^{***}  & 0.10^{***}  \\
+                                 &             & (0.01)      & (0.02)      & (0.02)      & (0.02)      \\
+Mother's education               &             & 0.12^{***}  & 0.11^{***}  & 0.09^{***}  & 0.10^{***}  \\
+                                 &             & (0.01)      & (0.01)      & (0.01)      & (0.01)      \\
+Father's soc. class              &             &             & 0.13^{***}  & 0.09^{***}  & 0.09^{***}  \\
+                                 &             &             & (0.01)      & (0.01)      & (0.01)      \\
+Number of siblings               &             &             &             &             & -0.01^{***} \\
+                                 &             &             &             &             & (0.00)      \\
+Eldest child                     &             &             &             &             & 0.01^{***}  \\
+                                 &             &             &             &             & (0.01)      \\
+BCS cohort                       & -0.16^{***} & -0.05^{***} & -0.02       & -0.02       & -0.04       \\
+                                 & (0.02)      & (0.02)      & (0.02)      & (0.02)      & (0.03)      \\
+Female $\times$ BCS              & 0.00        & 0.01        & 0.00        & 0.00        & -0.00       \\
+                                 & (0.01)      & (0.01)      & (0.01)      & (0.01)      & (0.01)      \\
+Parental income $\times$ BCS     & 0.05^{***}  & 0.05^{***}  & 0.04^{***}  & 0.02^{***}  & 0.03^{***}  \\
+                                 & (0.00)      & (0.01)      & (0.01)      & (0.01)      & (0.01)      \\
+Father's educ. $\times$ BCS      &             & -0.14^{***} & -0.09^{***} & -0.05^{***} & -0.05^{**}  \\
+                                 &             & (0.02)      & (0.02)      & (0.02)      & (0.02)      \\
+Mother's educ. $\times$ BCS      &             & -0.03       & -0.02       & -0.03^{*}   & -0.05^{**}  \\
+                                 &             & (0.02)      & (0.02)      & (0.02)      & (0.02)      \\
+Father's soc. class $\times$ BCS &             &             & -0.04^{***} & -0.03^{**}  & -0.03^{**}  \\
+                                 &             &             & (0.01)      & (0.01)      & (0.01)      \\
+Number of siblings $\times$ BCS  &             &             &             &             & 0.01^{***}  \\
+                                 &             &             &             &             & (0.00)      \\
+Eldest child $\times$ BCS        &             &             &             &             & -0.00       \\
+                                 &             &             &             &             & (0.01)      \\
+\midrule
+Parents' interest in education & \multicolumn{1}{c}{ } & \multicolumn{1}{c}{ } & \multicolumn{1}{c}{ } & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+Region FE & \multicolumn{1}{c}{ } & \multicolumn{1}{c}{ } & \multicolumn{1}{c}{ } & \multicolumn{1}{c}{Yes} & \multicolumn{1}{c}{Yes} \\
+\midrule
+R$^2$ & \multicolumn{1}{c}{0.04} & \multicolumn{1}{c}{0.09} & \multicolumn{1}{c}{0.11} & \multicolumn{1}{c}{0.18} & \multicolumn{1}{c}{0.18}\\
+Adj. R$^2$ & \multicolumn{1}{c}{0.04} & \multicolumn{1}{c}{0.09} & \multicolumn{1}{c}{0.11} & \multicolumn{1}{c}{0.17} & \multicolumn{1}{c}{0.18}\\
+Num. obs. & \multicolumn{1}{c}{20722} & \multicolumn{1}{c}{17354} & \multicolumn{1}{c}{13901} & \multicolumn{1}{c}{11814} & \multicolumn{1}{c}{10509}\\
+\bottomrule
+\end{tabular}

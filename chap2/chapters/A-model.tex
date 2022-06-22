@@ -1,0 +1,76 @@
+This appendix presents details on the model.
+
+\subsubsection{The allocation of labour under imperfect information}
+
+Under imperfect information, the second-period distribution of expected skills is given by
+\begin{equation*}
+    h=\left\{ 
+    \begin{array}{cc}
+    \underline{h}_{L} & (1-\pi )(z_{L}-q_1) \\ 
+    \widehat{h}_L & q_{1} \\ 
+    \underline{h}_{H} & (1-\pi )z_{H} \\ 
+    \overline{h}_{L} & \pi (z_{L}-q_1) \\ 
+    \overline{h}_{H} & \pi z_{H}%
+    \end{array}%
+    \right.  
+\end{equation*}
+
+Let $d_{1,2}$ (resp. $d_{2,3}$) be the threshold productivity between low-paying and middling jobs (resp. middling and high-paying jobs), i.e. $d_{1,2}$ is the skill for which individuals below this level are assigned to job type $1$. By construction, we have that $d_{1,2} \leq d_{2,3}$. Various scenarii are possible, and we focus on the case where low-paying jobs are filled with individuals from low-skill households, while middling and high-paying jobs contain workers from both low- and high-skill households. Assumption \ref{chap2-ass:threshold-skill-p2} ensures that this is the case. 
+
+Under assumptions \ref{chap2-ass:threshold-skill-p1} and \ref{chap2-ass:threshold-skill-p2}, the
+probability that an individual with parental background $i=\{L,H\}$ is in occupation $k\in\{1,2,3\}$ when mature, namely $P_j(k)$, is given by
+\begin{align*}
+    P_L(1) &=\frac{q_1}{z_L}, &&P_H(1) = 0,\\
+    P_L(2) &=(1-\pi)\left(1-\frac{q_1}{z_L}\right), &&P_H(2) = 1- \pi - \frac{q_{3}-\pi (1-q_{1})}{z_{H}},\\
+    P_L(3) &=\pi \left(1-\frac{q_1}{z_L}\right), &&P_H(3) = \pi +\frac{q_{3}-\pi (1-q_{1})}{z_{H}}.
+\end{align*}
+Note that Assumption \ref{chap2-ass:threshold-skill-p2} above imply that $q_{3}-\pi (1-q_{1})>0$. 
+
+We can now consider how changes in $q_{1}$ and $q_{3}$ (at the expense of $q_{2}$) affect inter-generational mobility. As long as Assumptions \ref{chap2-ass:threshold-skill-p1} and \ref{chap2-ass:threshold-skill-p2} hold, we have that
+\begin{itemize}
+    \item An increase in $q_{1}$ increases the probability of being in occupation 1 and reduces those of being in occupations 2 and 3 for individuals from low-income households. For individuals from high-income households, it increases the probability of being in occupation 3 and reduces that of being in occupation 2.
+    \item An increase in $q_{3}$ has no effect on the probabilities for individuals from low-skilled households. For individuals from high-income households, it increases the probability of being in occupation 3 and reduces that of being in occupation 2.
+\end{itemize}
+
+\subsubsection{The occupation distribution of mature workers under perfect information }
+
+In this subsection we consider the way in which our assumption about the information content of occupations affects mobility. We compare the distribution of occupations obtained under this assumption with that in the case in which there is perfect information. Under perfect information, firms face a distribution of skills in which they know for all workers whether they are high or low ability as well as their family type. The distribution of observed second-period skills is then
+\begin{equation*}
+    h=\left\{ 
+    \begin{array}{cc}
+        \underline{h}_{L} & (1-\pi )z_{L} \\ 
+        \underline{h}_{H} & (1-\pi )z_{H} \\ 
+        \overline{h}_{L} & \pi z_{L} \\ 
+        \overline{h}_{H} & \pi z_{H}%
+    \end{array}%
+    \right.  
+\end{equation*}
+
+Under assumptions \ref{chap2-ass:threshold-skill-p1} and \ref{chap2-ass:threshold-skill-p2}, the
+probability that an individual with parental background $i=\{L,H\}$ is in occupation $k\in\{1,2,3\}$ when mature, namely $P^\prime_i(k)$, is given by
+\begin{align*}
+    P^\prime_L(1) &=\frac{q_1}{z_L}, &&P^\prime_H(1) = 0,\\
+    P^\prime_L(2) &=1-\frac{q_1+q_3}{z_{L}}, &&P^\prime_H(2) = 1-\pi,\\
+    P^\prime_L(3) &=\frac{q_{3}-\pi (1-z_{L})}{z_{L}}, &&P^\prime_H(3) = \pi.
+\end{align*}
+These expressions imply that for those born in high-income households, the probabilities of being in the various occupations are independent of the distribution of employment. For those born in low-income households, both $q_1$ and $q_3$ have an impact. An increase in either of them (i.e. greater polarization) would reduce the share of those born in low-income households that works in middling occupations, thus, increasing the likelihood of being employed in the other two types of jobs. Polarization can hence affect mobility also in the case of perfect information through a direct mechanical effects due to the availability of jobs. Note, however, that in this case there are no inefficiencies associated with the allocation of labour, and that whether those from L-households benefit is ambiguous as both their likelihood of being in high- and low-paying occupations increases.
+
+Comparing these latter probabilities to those in Table \ref{chap2-tab:uncond-prb-p2} and given assumptions \ref{chap2-ass:threshold-skill-p1} and \ref{chap2-ass:threshold-skill-p2}, we can write
+\begin{align*}
+    P_L(1)-P_L^\prime(1) &= 0, \\
+    P_L(2)-P_L^\prime(2) &=\frac{q_{3}-\pi
+    (1-q_{1})}{z_{L}}>0, \\
+    P_L(3)-P_L^\prime(3) &= -\frac{q_{3}-\pi
+    (1-q_{1})}{z_{L}}<0, \\
+    P_H(1)-P_H^\prime(1) &= 0, \\
+    P_H(2)-P_H^\prime(2) &= -\pi -\frac{q_{3}-\pi(1-q_{1})}{z_{H}}<0, \\
+    P_H(3)-P_H^\prime(3) &= \pi +\frac{q_{3}-\pi (1-q_{1})}{z_{H}}>0.
+\end{align*}
+When comparing to the case with perfect information, the \textit{information friction} implies that:
+\begin{itemize}
+    \item those who come from worse-off households experience no change in the probabilities of being in low-paying occupations, but a higher (lower) likelihood of being in a middling (high-paying) occupation;
+    \item those who come from high-income households experience no change in the probabilities of being in low-paying occupations, but a lower (higher) likelihood of being in a middling (high-paying) occupation.
+\end{itemize}
+The information friction provides an inefficiency as under the friction we find in occupation 3 individuals that have a lower productivity that some of those in occupation 2, the former being low-ability individuals with high-income parents and the latter high-ability individuals with low-income parents. We can now consider how polarization affects the gaps due to the information friction. An increase in either $q_{1}$, or $q_{3}$, or both, will increase (decrease) the likelihood that individuals from high-income households are in occupation 3 (occupation 2) and decrease (increase) the likelihood that individuals from low-income households are in occupation 3 (occupation 2).
+
+The model then highlights that although polarization will affect the extent of mobility even under perfect information, imperfect information strengthens the effect. Moreover, it creates an inefficiency as some workers occupying high-paying jobs have a lower productivity than certain that are in less well paid jobs, and the extent of this missallocation will be greater the more polarized the distribution of employment is.

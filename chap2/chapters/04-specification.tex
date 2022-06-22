@@ -1,0 +1,46 @@
+Our analysis proceeds in two steps. The first consists in examining how an individual's occupation is affected by parental background. As we will detail in the next subsection, we suppose that this impact can potentially occur both through the effect on the child's initial occupation and on her occupation as a mature worker. In a second step, we consider regional patterns of mobility and assess to what extent regional differences in polarization are correlated to observed mobility patterns at the regional level.
+
+\subsection{The determinants of individual mobility} \label{chap2-specification1}
+
+In order to understand the effect of parental income on occupational dynamics we start by estimating its impact on the child's probability to start her career in each occupation $j\in J = \{O, L , M, H\}$, where the possible occupations are out-of-work ($O$), low-paying ($L$), middling ($M$) and high-paying ($H$). We define the out-of-work occupation as the baseline occupation category. Let $p_j$ be the probability to start in occupation $j = \{L , M, H\}$ which is given by the following multinomial logistic model:
+\begin{equation}\label{chap2-eq:emp-multi1}
+    \log\left(\frac{p_j}{p_O}\right) = \alpha_{1j} + \beta_{1j} Y^p + \gamma_{1j} X,
+\end{equation}
+where $Y^p$ is parental income, and $X$ are individual characteristics (in our baseline specifications simply gender). Parental income is log-standardized. All terms will be interacted with a dummy that equals one for those in the 1970 cohort (BCS70) and zero otherwise. Cross-term coefficients hence represent the change across cohorts in the effect of the variable on the child's initial occupation. In the appendix, we also report the estimation of the four binomial logistic models that characterize the multinomial one.
+
+We next consider the determinants of the probability of being in occupation $k \in K = \{O, L , M, H\}$ at age 42. The simplest specification is to consider a specification of the form
+\begin{equation}\label{chap2-eq:emp-multi2}
+    \log\left(\frac{p_k}{p_O}\right) = \alpha_{2k} + \beta_{2k} Y^p + \gamma_{2k} X,
+\end{equation}
+which captures how parental income determines the occupational outcome of the mature child. This expression is consistent with the approach usually found in the literature on inter-generational mobility in which only the labour market outcome of the mature worker is considered. In contrast, intra-generational analyses have focused on how incomes evolve over the individual's working life. We hence consider the following specification: 
+\begin{equation}\label{chap2-eq:emp-multi3}
+    \log\left(\frac{p_k}{p_O}\right) = \alpha_{3k} + \sum_{j} \eta_{kj} \mathbb{1}_{j} + \beta_{3k} Y^p + \gamma_{3k} X,
+\end{equation}
+where $\mathbb{1}_{j}$ is a dummy variable that equals one when the individual was in occupation $j\in J$ when young. As before, we estimate second-period equations with a multinomial model and separately for the four occupations using binomial logistic regressions, which we report in the appendix.
+
+The expression in equation (\ref{chap2-eq:emp-multi3}) shares with the literature on intra-generational mobility the idea that individual's may change position in the income ladder and that it is important to understand how those dynamics operate. It differs from existing approaches in two respects. First, we focus on occupational mobility over the lifetime, rather than income mobility; second, we control for parental income as a potential factor that can influence the extent to which the child changes occupations over time. Equation (\ref{chap2-eq:emp-multi3}) then adds to the literature on intra-generational mobility by allowing parental income to have an impact on lifetime occupational changes, and to that on inter-generational mobility by allowing the effect of parental income on the occupation of mature workers to occur both through their initial occupation and through the likelihood of transition to other jobs.  
+
+Our empirical strategy makes two important choices. The first is not to consider education decisions and to focus exclusively on the direct impact of parental income. The alternative approach would be to consider a three-step setup in which parental income determines education, which then determines first-period occupation, which in turn determines the second-period job.\footnote{A large literature has considered the role of education for social mobility, and in particular examined to what extent the influence of parental background takes place through educational achievement. Examples of this literature are \cite{Blanden2004Family}, \cite{Blanden2014Education}, \cite{Blanden2016Educational}, \cite{Gregg2010Family} and \cite{Major2018Social}.} The advantage of the latter approach is that it would allow us to infer how much of the parental-income advantage operates through education and how much is a direct effect; the drawback is that educational attainment is correlated with unobservable characteristics, notably ability but also the type of school attended, hence the effect that we may be attributing to years of education could be capturing other aspects, whether innate or related to parental background.\footnote{See \cite{harmon2003returns} for a discussion of the difficulty of differentiating between the returns to education and those to (innate or socially-acquired) ability.} We hence focus exclusively on the two occupational outcomes, although we perform the three-step analysis in Appendix \ref{chap2-app-education}.
+
+Second, we have chosen to use a multinomial logistic model considering the four possible occupational outcomes and where our reference outcome is being out-of-work. It is important to note that the transition from this category into the three employment occupations occurs with roughly equal probabilities. Notably, for the NCDS58 (BSC70) the probability of transiting from out of work to low- and high-paying occupations was, respectively, 24.7 pp. (25.3 pp.) and 27.3 pp. (26.4 pp.), i.e. of very similar magnitude. The likelihood to move into middling occupations was somewhat lower (20.7 and 14.5 pp.) but of comparable magnitude; see Table \ref{chap2-tab:proba-group4-cdt} above.
+
+\subsection{Mobility and regional polarization}
+
+The second step of our analysis consists in exploring the relationship between the observed changes in the role of parental income and polarization. We do so by examining whether changes in regional mobility are correlated to changes in the extent of polarization at the regional level. To do so we run a multinomial regression at the regional level for the determinants of the probability of being in occupation $k \in K = \{O, L , M, H\}$ at age 42. We do not compute first-period mobility and conditional second-period mobility because of sample sizes, as in many regions we have only a small number of individuals moving across certain occupations between first and second period. The equation we estimate is hence
+\begin{equation}\label{chap2-eq:regocc-multi2}
+    \log\left(\frac{p^r_k}{p^r_O}\right) = \alpha^r_{k} + \beta^r_{k} Y^p + \gamma^r_{k} X,
+\end{equation}
+where \emph{r} denotes the region. We hence use individual data to estimate 10 coefficients $\beta^r_{k}$ that capture the impact of parental income on occupational outcomes in each of the regions.
+
+As we will see below, our estimates indicate that the dynamics of the impact of parental income vary across regions, with the change across generations being much larger in some than in others. The last step in our analysis is hence to construct a measure of regional polarization and compute its correlation with our regional estimates. To capture changes in mobility in region $r$, we consider the between-cohort change in the role of parental income for being in occupation $k$, namely, $\Delta\beta_k^r$. We hence compute the correlation between mobility and polarization by running the regression
+\begin{equation}\label{chap2-eq:reg-multi2}
+    \Delta\beta_k^r = \delta_{k} + \eta_{k} \Delta Pol^r,
+\end{equation}
+where $Pol^r$ is a measure of polarization at the regional level for a particular cohort and $\Delta Pol^r$ its change across cohorts. The measure of polarization will be constructed using the Labour Force Survey in order to have larger regional samples than those provided by the cohort data \footnote{The measure of polarization used is discussed is detail in section \ref{chap2-regional} below, and Appendix \ref{chap2-app-data-LFS} gives details on the data used.} 
+
+
+
+
+
+
+

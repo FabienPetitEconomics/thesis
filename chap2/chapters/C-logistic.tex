@@ -1,0 +1,111 @@
+This appendix provides the regression tables for occupations under the multinomial and the binomial specifications of the logistic regressions. We also discuss the complementarity of both specifications to interpret coefficients as the the multinomial coefficients are relative to the baseline occupation category, namely, out-of-work.
+
+\subsubsection{First-period occupation}
+
+Table \ref{chap2-tab:occ-multi1-base} reports the coefficients of the \emph{multinomial} logistic regression from equation \eqref{chap2-eq:emp-multi1} for the first-period occupation. Table \ref{chap2-tab:occ-bi1-base} reports the coefficients regressions for the equivalent \emph{binomial} specification.
+
+Each of these two estimation methods has advantages and disadvantages. Consider first the binomial logit in Table \ref{chap2-tab:occ-bi1-base}. Each regression compares the probability of being in occupation $j$ relative to the other three outcomes. In some cases, the regression is easy to interpret. For example, the regression for out-of-work compares this outcome relative to a composite of all three other occupations, i.e. being in employment. The coefficients on the Out-of-work column then tell us that for the NCDS58 cohort parental income had no effect on being out-of-work, while for the BCS70 it had a negative and significant effect. For low-paying occupations we find that parental income reduces the likelihood to be in the occupation, with the effect being three times as high for the BCS70 than for the NCDS58. The 4th column indicates that parental income increases the probability of being in a high-paying occupation (as compared to the other three outcomes) for both cohorts, although the coefficient is twice as high for the younger cohort. The interpretation of the regressions becomes harder for middling occupations as the alternative not-being-in-middling-occupations includes outcomes that are better and outcomes that are worse than middling. We find a moderate effect of parental income (-0.07) and no significant change across cohorts. Yet this may be the result of differential effects for moving up or down the occupational scale.
+
+A solution to the above problem is to consider a multinomial logit, which compares the likelihood to be in each of the three employment categories to that of the reference group, out-of-work. The multinomial regressions have the advantage of considering simultaneously all the possible outcomes, yet they are harder to interpret as the coefficients represent odds relative to the omitted group. That is, when considering coefficients one needs to keep in mind the dynamics for the out-of-work outcome as captured by the Out-of-work column in Table \ref{chap2-tab:occ-bi1-base}. 
+
+The results for the multinomial estimation reported in Table \ref{chap2-tab:occ-multi1-base} indicate that the likelihood to be in a high-paying occupation is strongly affected by parental income, with the coefficient doubling across cohorts (from 0.21 to 0.42). The insignificant coefficients on ``$\text{Par. Inc.}$'' indicate that, for the NCDS58 cohort, parental income does not give an advantage to get low-paying or middling jobs relative to being out of work. However, it does confer such an advantage for the younger cohort. The negative slopes reported in Figure \ref{chap2-fig:occ-multi1-pinc} are the combination of a large decline in the coefficient on parental income for those out-of-work (see the coefficient on ``$\text{Par. inc.}~\times~\text{BCS}$'' in the first column in Table \ref{chap2-tab:occ-bi1-base}) and the positive but smaller coefficients on the first two columns of Table \ref{chap2-tab:occ-multi1-base}.
+
+\begin{table}[!htb]
+    \centering
+    \caption{Probability of being in each occupation at first period (multinomial)}
+    \label{chap2-tab:occ-multi1-base}
+    \begin{threeparttable}
+        \centering
+        \setlength{\tabcolsep}{15pt}
+        \input{chap2/tabular/occ-multi1-base}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: 
+            % Stars and SE
+            $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. 
+            % Baseline outcome
+            Out-of-work occupation in first period is the base outcome of the multinomial logistic regression.
+            % Referent group
+            Male in the NCDS58 cohort is the referent group. 
+            % Variables details
+            Parental income in logarithm and then standardized at the cohort level.}
+        \end{tablenotes}
+    \end{threeparttable}
+\end{table}
+
+\begin{table}[!htb]
+    \centering
+    \caption{Probability of being in each occupation at first period (binomial)}
+    \label{chap2-tab:occ-bi1-base}
+    \begin{threeparttable}
+        \centering
+        % \setlength{\tabcolsep}{0pt}
+        \input{chap2/tabular/occ-bi1-base}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: 
+            % Stars and SE
+            $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. 
+            % Referent group
+            Male in the NCDS58 cohort is the referent group. 
+            % Variables details
+            Parental income in logarithm and then standardized at the cohort level.}
+        \end{tablenotes}
+    \end{threeparttable}
+\end{table}
+
+\subsubsection{Second-period occupation}
+
+Table \ref{chap2-tab:occ-multi23-base} reports the coefficients of the \emph{multinomial} logistic regression for second-period occupation. Table \ref{chap2-tab:occ-bi23-base} reports the coefficients regressions for the equivalent \emph{binomial} specification.
+
+The first three columns report the coefficients for the baseline regression discussed in the text. The next three consider the role played by initial occupation. For the interpretation of the impact of the first period occupations, we have to keep in mind that the omitted group are those out of work. Thus absolute coefficients are the difference in log-odds with respect to out-of-work young individuals (middle panel) and the coefficients for BCS70 indicate the change in the log-odds between both cohorts (bottom panel). The positive coefficients in the second panel indicate that being in either of these occupations when young increases the probability of being in employment at age 42. The figures display a considerable degree of persistence, with the coefficients on the diagonal being large and highly significant. Note that being in a middling-occupation when young implies not only a high probability of being in that occupation when mature (coefficient of 1.47) but also a high probability of moving to a high-paying occupation (coefficient of 0.82). 
+
+When we compare the impact of initial occupation across the cohorts (bottom panel) there are only two significant changes. First, we see a considerable improvement in the outcomes for those who started in a low-paying occupation, for whom the odds of being out-of-work fell for the younger cohort. Second, for those who started in middling occupations, persistence increased considerably. This contrasts with the finding that persistence did not increase for those in high-paying occupations. 
+
+
+\begin{table}[!htb]
+    \centering
+    \caption{Probability of being in each occupation in the second period (multinomial)}
+    \label{chap2-tab:occ-multi23-base}
+    \resizebox*{\textwidth}{!}{
+    \begin{threeparttable}
+        \setlength{\tabcolsep}{0pt}
+        \input{chap2/tabular/occ-multi23-base}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item\textit{Notes}: 
+            % Stars and SE
+            $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. 
+            % Baseline outcome
+            Out-of-work occupation in second period is the base outcome of the multinomial logistic regression.
+            % Referent group
+            Male in the NCDS58 cohort in out-of-work occupation in first period is the referent group. 
+            % Variables details
+            Parental income in logarithm and then standardized at the cohort level. 
+            % Explaining bottom panels
+            Coefficients in the first bottom panel captures the change in the marginal effect of the first-period occupation with respect to the referent one, i.e. out-of-work. Coefficients in the second bottom panel indicates the change across cohorts in the marginal effect of the first-period occupation.}
+        \end{tablenotes}
+    \end{threeparttable}
+    }
+\end{table}
+
+\begin{table}[!htb]
+    \centering
+    \caption{Probability of being in each occupation in the second period (binomial)}
+    \label{chap2-tab:occ-bi23-base}
+    \resizebox*{\textwidth}{!}{
+    % \resizebox*{!}{\dimexpr\textheight-2\baselineskip\relax}{
+    \begin{threeparttable}
+        \setlength{\tabcolsep}{0pt}
+        \input{chap2/tabular/occ-bi23-base}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item\textit{Notes}: 
+            % Stars and SE
+            $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. 
+            % Referent group
+            Male in the NCDS58 cohort in out-of-work occupation in first period is the referent group. 
+            % Variables details
+            Parental income in logarithm and then standardized at the cohort level. 
+            % Explaining bottom panels
+            Coefficients in the first bottom panel captures the change in the marginal effect of the first-period occupation with respect to the referent one, i.e. out-of-work. Coefficients in the second bottom panel indicates the change across cohorts in the marginal effect of the first-period occupation.}
+        \end{tablenotes}
+    \end{threeparttable}
+    }
+\end{table}

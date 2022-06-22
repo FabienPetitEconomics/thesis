@@ -1,0 +1,26 @@
+\begin{tabular}{l D{.}{.}{5.5} D{.}{.}{6.5} D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5}}
+\toprule
+ & \multicolumn{5}{c}{Binomial logistic regression - Dependent variable: Types of mobility} \\
+\cmidrule(lr){2-6}
+ & \multicolumn{3}{c}{(Raw)} & \multicolumn{2}{c}{(Aggregate)} \\
+\cmidrule(lr){2-4}\cmidrule(lr){5-6}
+ & \multicolumn{1}{c}{Down} & \multicolumn{1}{c}{Persist} & \multicolumn{1}{c}{Up} & \multicolumn{1}{c}{Not Up (vs Up)} & \multicolumn{1}{c}{Not Down (vs Down)} \\
+\midrule
+Intercept              & -1.76^{***} & 0.06^{*}    & -0.67^{***} & 0.67^{***}  & 1.76^{***}  \\
+                       & (0.05)      & (0.03)      & (0.04)      & (0.04)      & (0.05)      \\
+BCS cohort             & 0.03        & 0.38^{***}  & -0.47^{***} & 0.47^{***}  & -0.03       \\
+                       & (0.07)      & (0.05)      & (0.05)      & (0.05)      & (0.07)      \\
+Female                 & 0.62^{***}  & -0.42^{***} & 0.04        & -0.04       & -0.62^{***} \\
+                       & (0.06)      & (0.05)      & (0.05)      & (0.05)      & (0.06)      \\
+Female $\times$ BCS    & -0.04       & -0.17^{**}  & 0.24^{***}  & -0.24^{***} & 0.04        \\
+                       & (0.09)      & (0.07)      & (0.07)      & (0.07)      & (0.09)      \\
+Par. inc.              & -0.03       & 0.02        & 0.00        & -0.00       & 0.03        \\
+                       & (0.03)      & (0.02)      & (0.03)      & (0.03)      & (0.03)      \\
+Par. inc. $\times$ BCS & -0.03       & 0.11^{***}  & -0.11^{***} & 0.11^{***}  & 0.03        \\
+                       & (0.04)      & (0.03)      & (0.04)      & (0.04)      & (0.04)      \\
+\midrule
+Pseudo R$^2$ & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.02} & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.01} & \multicolumn{1}{c}{0.01}\\
+Log Likelihood & \multicolumn{1}{c}{-7244.29} & \multicolumn{1}{c}{-10066.12} & \multicolumn{1}{c}{-9004.78} & \multicolumn{1}{c}{-9004.78} & \multicolumn{1}{c}{-7244.29}\\
+Num. obs. & \multicolumn{1}{c}{14772} & \multicolumn{1}{c}{14772} & \multicolumn{1}{c}{14772} & \multicolumn{1}{c}{14772} & \multicolumn{1}{c}{14772}\\
+\bottomrule
+\end{tabular}

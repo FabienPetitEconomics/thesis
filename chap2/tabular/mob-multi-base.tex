@@ -1,0 +1,24 @@
+\begin{tabular}{l D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5}}
+\toprule
+ & \multicolumn{4}{c}{Multinomial logistic regression - Dependent variable: Mobility type} \\
+\cmidrule(lr){2-5}
+ & \multicolumn{2}{c}{(Base outcome = Down)} & \multicolumn{2}{c}{(Base outcome = Persist)} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}
+ & \multicolumn{1}{c}{Persist} & \multicolumn{1}{c}{Upward} & \multicolumn{1}{c}{Downward} & \multicolumn{1}{c}{Upward} \\
+\midrule
+Intercept              & 1.25^{***}  & 0.83^{***}  & -1.25^{***} & -0.42^{***} \\
+                       & (0.05)      & (0.05)      & (0.05)      & (0.04)      \\
+BCS cohort             & 0.14^{**}   & -0.36^{***} & -0.14^{**}  & -0.50^{***} \\
+                       & (0.07)      & (0.08)      & (0.07)      & (0.06)      \\
+Female                 & -0.73^{***} & -0.48^{***} & 0.73^{***}  & 0.25^{***}  \\
+                       & (0.07)      & (0.07)      & (0.07)      & (0.05)      \\
+Female $\times$ BCS    & -0.01       & 0.22^{**}   & 0.01        & 0.23^{***}  \\
+                       & (0.09)      & (0.10)      & (0.09)      & (0.08)      \\
+Par. inc.              & 0.03        & 0.02        & -0.03       & -0.01       \\
+                       & (0.03)      & (0.03)      & (0.03)      & (0.03)      \\
+Par. inc. $\times$ BCS & 0.08^{*}    & -0.05       & -0.08^{*}   & -0.13^{***} \\
+                       & (0.04)      & (0.05)      & (0.04)      & (0.04)      \\
+\midrule
+Num. obs. & \multicolumn{1}{c}{14772} & \multicolumn{1}{c}{14772} & \multicolumn{1}{c}{14772} & \multicolumn{1}{c}{14772}\\
+\bottomrule
+\end{tabular}

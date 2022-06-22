@@ -1,0 +1,124 @@
+% What do we do here?
+The empirical work aims to investigate the presence of spillover effects across values and how they behave. I proceed in several steps. First, I investigate the effect of both exogenous life events, which characterize the information shocks, on conservatism, collectivism, and group membership, but independently. I observe that only conservatism is affected. Second, I show the presence of spillover effects on collectivism by instrumenting conservative values with the life event. Third, I raise the issue of the two-sided effect in the case of unemployment as unemployment does affect both values at the same time, hence, the identification using instrumental variables does not hold in this setting. 
+
+\subsection{Effect of life events on values}
+
+I estimate \textit{independently} with OLS the effect of the life event $z\in Z=\{GotCancer$, $GirlFirst$, $BeenUnemp\}$ on value $v\in V=\{Cons$, $Coll\}$ for an individual $i$ in period $t$ with the following equation:
+\begin{equation}\label{chap3-eq:est-indep}
+    v_{it} = \alpha + \beta \times z_{it} + \eta \times v_{i,t-1} + X_{i} \delta + u_{it}
+\end{equation}
+where $X$ are control variables including gender, education, along with period and cohort fixed effects. 
+
+Table \ref{chap3-tab:reg-v5-raw-all-short} summarizes the coefficients.
+\begin{table}[!tb]
+    \centering
+    \caption{Effect of life events on values}
+    \label{chap3-tab:reg-v5-raw-all-short}
+    % \resizebox*{\textwidth}{!}{
+    \begin{threeparttable}
+        \setlength{\tabcolsep}{0pt}
+        \input{chap3/tabular/reg-v5-raw-all-short}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. Control variables include gender, education (primary, secondary, tertiary), cohort fixed effects and period fixed effects. Male in the NCDS cohort in his forties with primary education as the reference group. GirlFirst and GotCancer are the life events. In GirlFirst regressions, parents who have had a boy as a first child are the reference group. In GotCancer regressions, individuals who never had a cancer are the reference group. In BeenUnemp, individuals who have never been unemployed are the reference group. Table \ref{chap3-tab:reg-v5-raw-all-long} in the appendix presents all the coefficients.}
+        \end{tablenotes}
+    \end{threeparttable}
+    % }
+\end{table}
+% Life event row
+For both life events, having a girl as a first child and having ever had cancer, the coefficients are positive and significant in both (Cons) columns; while they are not significant in (Coll) ones.
+Parents who have had a girl as a first child, instead of a boy, tend to hold more conservative values, about 0.03 standard deviation, without any statistical difference in their collectivism.
+Individuals who have ever had cancer seem to be more conservative, by 0.09 standard deviation, although they do not differ from others in terms of collectivism versus individualism.
+For having ever been unemployed, the associated coefficients are both significant and positive.
+Individuals who have ever been unemployed tend to be more conservative and collectivist, by respectively 0.02 and 0.18 standard deviation.
+
+% Value t-1 row
+Coefficients associated with the lag of the value lie around 0.55 standard deviation for conservatism and around 0.49 standard deviation for collectivism. This pattern indicates that conservative values are more correlated over periods than collectivist values. In terms of the theoretical framework, it provides evidence that time consistency may be more important for conservatism with respect to collectivism.
+
+\subsection{Values change and group membership}
+
+As we observe that people affected by life-changing events tend to hold different values, we, hence, look at their likelihood to change their group membership. Let $p_s$ be the probability to vote for a political party $s\in\{Con,$ $Grn,$ $Lab,$ $LD,$ $UKIP\}$. Thus, we can estimate these probabilities relative to the probability to vote for the $Other$ category $p_O$---which encompasses all other parties, blank votes, and abstention. I estimate the following multinomial logistic regression:
+\begin{equation}\label{chap3-eq:est-multi}
+    \log\left(\frac{p_s}{p_O}\right) = \pi_{s} + \phi_{1s} \Delta Cons_t + \phi_{2s} \Delta Coll_t + \eta_{1s} Cons_{t-1} + \eta_{2s} Coll_{t-1} + \gamma_{s} X,
+\end{equation}
+where $\Delta v_t\equiv v_t - v_{t-1}$ are the changes in conservatism and collectivism, which are conditional on individuals' values in previous period, i.e. $Cons_{t-1}$ and $Coll_{t-1}$, and also conditional on the political party for which the individual voted at the previous general election. The latter variable is included in control variables $X$ along with gender, education, cohort and period fixed effects.
+
+Table \ref{chap3-tab:reg-v5-raw-vote-short} summarizes the coefficients. 
+\begin{table}[!tb]
+    \centering
+    \caption{Effect of values change on the group membership}
+    \label{chap3-tab:reg-v5-raw-vote-short}
+    \begin{threeparttable}
+        \input{chap3/tabular/reg-v5-raw-vote-short}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. Control variables include gender, education (primary, secondary, tertiary), cohort fixed effects and period fixed effects. Male in the NCDS cohort in his forties with primary education as the reference group. GirlFirst and GotCancer are the life events. In GirlFirst regressions, parents who have had a boy as a first child are the reference group. In GotCancer regressions, individuals who never had a cancer are the reference group. 
+            % Multinomial
+            The baseline outcome of the multinomial logistic regression is the vote for Other (encompassing all other parties, blank votes, and abstention). $\text{Vote}_{t-1}$ corresponds to the effect of having voted for the same party in the previous period.
+            Table \ref{chap3-tab:reg-v5-IV-GFvote} and \ref{chap3-tab:reg-v5-IV-GCvote} in the appendix present all the coefficients for both life events.}
+        \end{tablenotes}
+    \end{threeparttable}
+\end{table}
+These coefficients provide the log odds of voting for the political party $(s)$ relative to the baseline outcome (voting for $Other$). The signs of those coefficients have to be compared with the relative position of political parties with respect to Other category, as depicted in figure \ref{chap3-fig:vote-v5}. 
+
+To derive the effect of values' changes on the odds of voting for one party with respect to another one, we take the exponential of the difference between both coefficients.
+For instance, a one-standard-deviation increase in conservatism raises the odds to vote for the Conservatives with respect to the Labour party by 12\%, but it also reduces the odds to vote for the Conservatives with respect to UKIP by 27\%.
+Similarly, a one-standard-deviation increase in collectivism raises the odds to vote for the Labour party with respect to its historical rival by 26\%.\footnote{These coefficients are obtained by taking the exponential of the difference between both associated coefficients, respectively, $\exp(-0.06-(-0.17)) = 1.12$, $\exp(-0.06-0.26) = 0.73$ and $\exp(-0.14-(-0.37)) = 1.26$.}
+
+Changes in values are associated with changes in the likelihood to vote for the political parties, hence, with changes in the probability to identify with a new group. An increase in conservative values is associated with a rise in the probability to vote for right-wing and far-right parties, while an increase in collectivist values relates to individuals being more likely to vote for left-wing parties.
+
+\subsection{Spillover effects}\label{chap3-sec:spillover}
+
+To test the existence of spillover effects, I estimate instrumental variable (IV) regressions using two-stage least squares (2SLS). I assume that the information shock associated to the life event ($z$) affects the conservative value ($Cons$) but not the collectivism ($Coll$). Thus, by instrumenting $Cons_t$ with $z$---conditional on $Cons_{t-1}$---in a first stage, I am able to test whether there is spillover effect in the second stage in which I regress $Coll_t$ on the predicted $Cons_t$---conditional on $Coll_{t-1}$. The two stages of the 2SLS estimate can be written as:
+\begin{align}
+    Cons_{it} &= \alpha_1 + \beta_1 \times z_{it} + \eta_1 \times Cons_{i,t-1} + X_{i} \delta_1 + \varepsilon_{it}, \label{chap3-emp:iv-stage1} \tag{IV - Stage 1}\\
+    Coll_{it} &= \alpha_2 + \beta_2 \times \widehat{Cons}_{it} + \eta_2 \times Coll_{i,t-1} + X_{i} \delta_2 + u_{it}, \label{chap3-emp:iv-stage2} \tag{IV - Stage 2}
+\end{align}
+where $\widehat{Cons}$ are the predicted $Cons$ and $X$ are control variables including gender, education, along with period and cohort fixed effects.
+
+% Results
+Table \ref{chap3-tab:reg-v5-IV-GFGC-short} summarizes the coefficients for the IV regressions.
+\begin{table}[!tb]
+    \centering
+    \caption{IV Estimate of the spillover effect}
+    \label{chap3-tab:reg-v5-IV-GFGC-short}
+    % \resizebox*{\textwidth}{!}{
+    \begin{threeparttable}
+        \input{chap3/tabular/reg-v5-IV-GFGC-short}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. Control variables include gender, education (primary, secondary, tertiary), cohort fixed effects and period fixed effects. Male in the NCDS cohort in his forties with primary education as the reference group. GirlFirst and GotCancer are the life events. In GirlFirst regressions, parents who have had a boy as a first child are the reference group. In GotCancer regressions, individuals who never had a cancer are the reference group. Table \ref{chap3-tab:reg-v5-IV-GFGC-long} in the appendix presents all the coefficients.}
+        \end{tablenotes}
+    \end{threeparttable}
+    % }
+\end{table}
+In both first-stage regressions, the information shock on conservatism due to the life event is positive and significant. To have a girl instead of a boy as a first child increases conservatism by 0.03 standard deviation, while to have ever had cancer raises conservatism by 0.09 standard deviation.
+
+In both second-stage regressions, the spillover effect is negative and significant. For the first life event, a one-standard-deviation increase in conservatism decreases collectivism by 0.32 standard deviation; while an increase of the same magnitude for the second life event also reduces collectivism by 0.34 standard deviation. As the values associated with collectivism decrease, it means that those related to individualism increase. 
+
+Both exogenous and irreversible life-changing events show that values changes through spillover effects. In my theoretical framework, I argue that those latter are due to a change in the group membership. To validate such a mechanism, I use the first-stage IV regression within a second-stage IV multinomial logistic regression to estimate the probability to vote for a political party. Thus, the second stage can be written as
+\begin{equation}\label{chap3-eq:est-multi2}
+    \log\left(\frac{p_s}{p_O}\right) = \pi^\prime_{s} + \beta_s \times \widehat{Cons}_{it} + \gamma_{s} X,
+\end{equation}
+where $\widehat{Cons}$ are the predicted $Cons$ from the first-stage IV regression, and $X$ are control variables including the vote in the previous general election,  gender, education, cohort and period fixed effects.
+
+Table \ref{chap3-tab:reg-v5-IV-GFGCvote-short} summarizes the coefficients for the second-stage IV multinomial logistic regression.
+\begin{table}[!tb]
+    \centering
+    \caption{IV Estimate of the group membership}
+    \label{chap3-tab:reg-v5-IV-GFGCvote-short}
+    % \resizebox*{\textwidth}{!}{
+    \begin{threeparttable}
+        % \setlength{\tabcolsep}{-6pt}
+        \input{chap3/tabular/reg-v5-IV-GFGCvote-short}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. Control variables include gender, education (primary, secondary, tertiary), cohort fixed effects and period fixed effects. Male in the NCDS cohort in his forties with primary education as the reference group. GirlFirst and GotCancer are the life events. In GirlFirst regressions, parents who have had a boy as a first child are the reference group. In GotCancer regressions, individuals who never had a cancer are the reference group. 
+            % Multinomial
+            The baseline outcome of the multinomial logistic regression is the vote for Other (encompassing all other parties, blank votes, and abstention). $\text{Vote}_{t-1}$ corresponds to the effect of having voted for the same party in the previous period.
+            Table \ref{chap3-tab:reg-v5-IV-GFvote} and \ref{chap3-tab:reg-v5-IV-GCvote} in the appendix present all the coefficients for both life events.}
+        \end{tablenotes}
+    \end{threeparttable}
+    % }
+\end{table}
+The top panel corresponds to the estimate of the relative probability to vote for each political party when the conservative values are instrumented with the $GirlFirst$ life event, whereas the bottom panel refers to the same estimate when the conservative values are instrumented with the $GotCancer$ life event.
+
+Coefficients are fairly similar across both life events indicating that they have similar effects on the probability to vote for one political party or another. A notable exception is the $\widehat{Cons}$ in the Conservatives column (Con) that is positive but not significant in the column (Con) for the first life event, while it is significant for the second life event. Changes in voting behavior due to changes in values instrumented by life-changing events are consistent with the positioning of political parties in the two-dimensional value space depicted in figure \ref{chap3-fig:vote-v5} which provides empirical evidence of the group membership as the underlying mechanism in explaining the existence of spillover effects.
+
+Both exogenous and irreversible life events show that spillover effects account for a third of the information shock. Nonetheless, the identification relies on the assumption that the information shock, associated with the life event, does not directly affect collectivism, i.e. $Coll \perp z$. This assumption is likely to be too strong, even for those life events.

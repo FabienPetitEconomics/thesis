@@ -1,0 +1,40 @@
+\begin{tabular}{l D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5} D{.}{.}{5.5}}
+\toprule
+ & \multicolumn{8}{c}{Binomial logit - Dep. var.: Second-period occupation} \\
+\cmidrule(lr){2-9}
+ & \multicolumn{2}{c}{Out-of-work} & \multicolumn{2}{c}{Low-paying} & \multicolumn{2}{c}{Middling} & \multicolumn{2}{c}{High-paying} \\
+\cmidrule(lr){2-3}\cmidrule(lr){4-5}\cmidrule(lr){6-7}\cmidrule(lr){8-9}
+ & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} & \multicolumn{1}{c}{(1)} & \multicolumn{1}{c}{(2)} \\
+\midrule
+Intercept                                                                          & -2.39^{***} & -1.59^{***} & -1.97^{***} & -1.76^{***} & -0.69^{***} & -1.07^{***} & -0.16^{***} & -0.52^{***} \\
+                                                                                   & (0.06)      & (0.09)      & (0.05)      & (0.08)      & (0.04)      & (0.08)      & (0.04)      & (0.07)      \\
+BCS cohort                                                                         & -0.06       & 0.27^{**}   & -0.02       & 0.13        & -0.15^{***} & -0.33^{***} & 0.12^{**}   & -0.18^{*}   \\
+                                                                                   & (0.09)      & (0.12)      & (0.07)      & (0.12)      & (0.05)      & (0.12)      & (0.05)      & (0.10)      \\
+Female                                                                             & 0.99^{***}  & 0.80^{***}  & 0.89^{***}  & 0.85^{***}  & -0.51^{***} & -0.39^{***} & -0.61^{***} & -0.66^{***} \\
+                                                                                   & (0.08)      & (0.08)      & (0.07)      & (0.07)      & (0.05)      & (0.06)      & (0.05)      & (0.06)      \\
+Female $\times$ BCS                                                                & -0.04       & -0.06       & -0.09       & -0.19^{**}  & -0.17^{**}  & -0.17^{**}  & 0.20^{***}  & 0.30^{***}  \\
+                                                                                   & (0.10)      & (0.11)      & (0.09)      & (0.10)      & (0.08)      & (0.08)      & (0.07)      & (0.08)      \\
+Par. inc.                                                                          & -0.09^{***} & -0.07^{**}  & -0.08^{***} & -0.05       & -0.06^{**}  & -0.03       & 0.17^{***}  & 0.12^{***}  \\
+                                                                                   & (0.03)      & (0.03)      & (0.03)      & (0.03)      & (0.03)      & (0.03)      & (0.03)      & (0.03)      \\
+Par. inc. $\times$ BCS                                                             & -0.23^{***} & -0.16^{***} & -0.18^{***} & -0.10^{**}  & -0.07^{**}  & -0.04       & 0.28^{***}  & 0.19^{***}  \\
+                                                                                   & (0.05)      & (0.05)      & (0.04)      & (0.04)      & (0.04)      & (0.04)      & (0.04)      & (0.04)      \\
+\midrule\multicolumn{9}{l}{Change with respect to the referent group as first period occupation (Out-of-work)} \\ \midrule
+\quad Low-paying                                                                   &             & -0.54^{***} &             & 0.88^{***}  &             & -0.10       &             & -0.33^{***} \\
+                                                                                   &             & (0.11)      &             & (0.09)      &             & (0.10)      &             & (0.10)      \\
+\quad Middling                                                                     &             & -0.98^{***} &             & -0.36^{***} &             & 0.97^{***}  &             & -0.03       \\
+                                                                                   &             & (0.09)      &             & (0.08)      &             & (0.08)      &             & (0.07)      \\
+\quad High-paying                                                                  &             & -1.25^{***} &             & -1.15^{***} &             & -0.71^{***} &             & 1.76^{***}  \\
+                                                                                   &             & (0.11)      &             & (0.11)      &             & (0.10)      &             & (0.08)      \\
+\midrule\multicolumn{9}{l}{Change between cohorts} \\ \midrule
+\quad Low. $\times$ BCS                                                            &             & -0.57^{***} &             & 0.11        &             & 0.26^{*}    &             & 0.13        \\
+                                                                                   &             & (0.15)      &             & (0.13)      &             & (0.15)      &             & (0.14)      \\
+\quad Mid. $\times$ BCS                                                            &             & -0.26^{**}  &             & -0.18       &             & 0.47^{***}  &             & 0.08        \\
+                                                                                   &             & (0.13)      &             & (0.12)      &             & (0.12)      &             & (0.11)      \\
+\quad High. $\times$ BCS                                                           &             & -0.22       &             & 0.03        &             & 0.29^{**}   &             & 0.03        \\
+                                                                                   &             & (0.14)      &             & (0.15)      &             & (0.14)      &             & (0.11)      \\
+\midrule
+Pseudo R$^2$ & \multicolumn{1}{c}{0.04} & \multicolumn{1}{c}{0.08} & \multicolumn{1}{c}{0.03} & \multicolumn{1}{c}{0.10} & \multicolumn{1}{c}{0.02} & \multicolumn{1}{c}{0.10} & \multicolumn{1}{c}{0.03} & \multicolumn{1}{c}{0.14}\\
+Log Likelihood & \multicolumn{1}{c}{-5771.10} & \multicolumn{1}{c}{-5530.48} & \multicolumn{1}{c}{-6886.99} & \multicolumn{1}{c}{-6378.03} & \multicolumn{1}{c}{-8257.73} & \multicolumn{1}{c}{-7541.67} & \multicolumn{1}{c}{-9679.83} & \multicolumn{1}{c}{-8582.94}\\
+Num. obs. & \multicolumn{1}{c}{14763} & \multicolumn{1}{c}{14763} & \multicolumn{1}{c}{14763} & \multicolumn{1}{c}{14763} & \multicolumn{1}{c}{14763} & \multicolumn{1}{c}{14763} & \multicolumn{1}{c}{14763} & \multicolumn{1}{c}{14763}\\
+\bottomrule
+\end{tabular}

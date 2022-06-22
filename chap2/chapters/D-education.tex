@@ -1,0 +1,87 @@
+This section replicates our core analysis but considers a three-step process in which we also account for education. We start by estimating the impact of parental income on child education, and consider the following linear specification:
+\begin{equation}\label{chap2-eq:emp-educ0}
+    E^c = \alpha_4 + \beta_4 Y^p + \phi_f E^f + \phi_m E^m + \gamma_4 X,
+\end{equation}
+where $E^c$ is the child's education, and $E^f$ (resp. $E^m$) is the father's (resp. mother's) education. Education variables are measured in peer-inclusive downward-looking ranking. All terms are
+interacted with a dummy that equals one for those in the 1970 cohort (BCS70).
+Table \ref{chap2-tab:educ-linear1} summarizes the coefficients for the determinants of child's education.
+\begin{table}[!htb]
+    \centering
+    \caption{Determinants of child's education}
+    \label{chap2-tab:educ-linear1}
+    \resizebox*{\textwidth}{!}{
+    \begin{threeparttable}
+        \centering
+        % \setlength{\tabcolsep}{3pt}
+        \input{chap2/tabular/educ-linear1}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: 
+            % Stars and SE
+            $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. 
+            % Referent group
+            Male in the NCDS58 cohort is the referent group. 
+            % Variables details
+            Parental income in logarithm and child education in peer-inclusive ranking, both are standardized at the cohort level.}
+        \end{tablenotes}
+    \end{threeparttable}
+    }
+\end{table}
+
+Table \ref{chap2-tab:educ-linear1} reports the coefficients obtained when we run various specifications for the determinants of education. The baseline column simply regresses educational attainment on parental income and gender. As expected, the effect of parental income is strong. Moreover, it almost doubles across the two cohorts, increasing from 0.13 for the older cohort to 0.24 for the BCS. The next four columns sequentially introduce other possible determinant of education such as parental education, father's social class and number of siblings. The effect of parental income is reduced as these controls are added to the regression; however, the doubling of the coefficient on parental income across cohorts remains robust.   
+
+The education of the mother and the father as well as the social class of the latter are all important factors in the child's educational outcome, and much of the effect of income identified in column (1) is capturing the effect of these factors. Interestingly, for the BCS70 cohort the impact of such variables has fallen relative to that found for the NCDS58 (although the coefficients are not always significant). This seems to indicate that across the two cohorts parental income has gained importance and other parental characteristics have lost it in determining a child's education.
+
+We next estimate the multinomial logistic regressions for both first- and second-period occupations---equivalent to equations \eqref{chap2-eq:emp-multi1}, \eqref{chap2-eq:emp-multi2}, and \eqref{chap2-eq:emp-multi3} but introducing child's education as an explanatory variable.  The regressions are reported in tables \ref{chap2-tab:educ-multi1-base} and \ref{chap2-tab:educ-multi23-base} and reproduce the results previously obtained. 
+
+Consider the determinants of an individual's probability to start her career in each of the occupations $j$. Comparing these results with those in Table  \ref{chap2-tab:occ-multi1-base} we see that, as far as high-paying occupations go, much of the effect of parental income occurs through education (or unobserved characteristics correlated with education). When we compare the two cohorts, the most important result is that while the direct effect of parental income has increased across cohorts (by the same magnitude as when we did not control for education), that of education has not. 
+\begin{table}[!htb]
+    \centering
+    \caption{Probability of being in each occupation at first period (multinomial)}
+    \label{chap2-tab:educ-multi1-base}
+    \begin{threeparttable}
+        \centering
+        \setlength{\tabcolsep}{15pt}
+        \input{chap2/tabular/educ-multi1-base}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item \textit{Notes}: 
+            % Stars and SE
+            $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. 
+            % Baseline outcome
+            Out-of-work occupation in first period is the base outcome of the multinomial logistic regression.
+            % Referent group
+            Male in the NCDS58 cohort is the referent group. 
+            % Variables details
+            Parental income in logarithm and then standardized at the cohort level.
+            Education variables and the father’s social class are defined in peer-inclusive ranking. All variables, except dummies, are standardized at the cohort level to take into account changes in the variance of the variables’ distributions between both cohorts.}
+        \end{tablenotes}
+    \end{threeparttable}
+\end{table}
+
+
+Concerning the occupation of mature workers, Table \ref{chap2-tab:educ-multi23-base} reports regressions in which it depends on education as well as on parental income and the initial job. The coefficients on initial occupations and on parental income are similar to those obtained in the specification without education. Interestingly, the relative impacts of education and parental income on the likelihood to be in a high-paying occupation have changed across cohorts, with parental income becoming more important  and (our measure of) education less for the BCS70 than for the NCDS58 cohort.
+
+\begin{table}[!htb]
+    \centering
+    \caption{Probability of being in each occupation in the second period (multinomial)}
+    \label{chap2-tab:educ-multi23-base}
+    \resizebox*{\textwidth}{!}{
+    \begin{threeparttable}
+        \setlength{\tabcolsep}{0pt}
+        \input{chap2/tabular/educ-multi23-base}
+        \begin{tablenotes}[flushleft]
+            \footnotesize{\item\textit{Notes}: 
+            % Stars and SE
+            $^{***}p<0.01$; $^{**}p<0.05$; $^{*}p<0.1$. Standard errors between parentheses. 
+            % Baseline outcome
+            Out-of-work occupation in second period is the base outcome of the multinomial logistic regression.
+            % Referent group
+            Male in the NCDS58 cohort in out-of-work occupation in first period is the referent group.  
+            % Variables details
+            Parental income in logarithm and child education in peer-inclusive ranking, both are standardized at the cohort level.
+            % Explaining bottom panels
+            Coefficients in the first bottom panel captures the change in the marginal effect of the first-period occupation with respect to the referent one, i.e. out-of-work. Coefficients in the second bottom panel indicates the change across cohorts in the marginal effect of the first-period occupation.}
+        \end{tablenotes}
+    \end{threeparttable}
+    }
+\end{table}
+Overall, these three tables indicate that including education in the analysis has little impact on our estimates of the differences in the parental income coefficients across the to cohorts.
