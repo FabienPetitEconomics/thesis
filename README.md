@@ -98,4 +98,4 @@ There are several recommended steps to move from your working papers to this the
 
 # Acknowledgments
 
-This template was copied and improved from [github.com/SCD-Aix-Marseille-Universite/latexamu](https://github.com/SCD-Aix-Marseille-Universite/latexamu) to fit AMSE students' needs. I am grateful to Julieta Peveri and Rosnel Sesssinou for their advice during the writing of this template.
+This template was copied and improved from [github.com/SCD-Aix-Marseille-Universite/latexamu](https://github.com/SCD-Aix-Marseille-Universite/latexamu) to fit AMSE students' needs. I thank Julieta Peveri and Rosnel Sesssinou for their advice while writing this template. I am grateful to Sarah Vincent for updating this template.
