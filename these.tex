@@ -12,17 +12,24 @@
 	\pdfbookmark[0]{Affidavit}{affidavit}
 	\thispagestyle{empty}
 	\input{tex/licence}
+ 
+	                                    %% Liste des publications et conférence
+	\newpage
+	\chapter*{Publications, Conferences and Summer Schools} 
+	\thispagestyle{empty}
+	\input{tex/publi.tex}
 
-	\chapter*{Résumé}					%% résumé
-    \addcontentsline{toc}{chapter}{Résumé}
+	\newpage
+ 	\chapter*{Résumé}					%% résumé
+    	\addcontentsline{toc}{chapter}{Résumé}
 	\input{tex/resume}
 
 	\chapter*{Abstract}					%% abstract
-    \addcontentsline{toc}{chapter}{Abstract}
+    	\addcontentsline{toc}{chapter}{Abstract}
 	\input{tex/abstract}
 
 	\chapter*{Acknowledgements}			%% remerciements
-    \addcontentsline{toc}{chapter}{Acknowledgements}
+    	\addcontentsline{toc}{chapter}{Acknowledgements}
 	\input{tex/remercie}
 	
     \microtypesetup{protrusion=false}	%% désactive la protrusion (TOC LOFT GLS)
