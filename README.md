@@ -38,6 +38,7 @@ The structure of the thesis is called from the `these.tex` file. Dependencies ar
 | `conc.tex`              | Conclusion |
 | `intro.tex`             | Introduction |
 | `licence.tex`           | Licence |
+| `publi.tex`           | Publications and Conferences |
 | `remercie.tex`          | Acknowledgments |
 | `resume.tex`            | Abstract (FR) |
 | `titre.tex`             | Title page |
@@ -71,14 +72,14 @@ There are several recommended steps to move from your working papers to this the
 - Change the names and the date.
 - Sign it.
 
-## Résumé/Abstract/Acknowledgements (`resume.tex`/`abstract.tex`/`remercie.tex`)
+## Résumé/Abstract/Acknowledgements/Publications (`resume.tex`/`abstract.tex`/`remercie.tex`/`publi.tex`)
 
 - You know what to do, you're a big grown Ph.D. student.
 
 ## Bibliography (`biblio.bib`)
 
 - Insert **ALL** your references (from all chapters) into this bib file.
-- Remove doi, url, isbn, eprint, and related fields for all references.
+- Remove abstract, doi, url, isbn, eprint, and related fields for all references.
 - Check duplicates.
 
 ## General Introduction/General Conclusion (`intro.tex`/`conclu.tex`)
